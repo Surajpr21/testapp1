@@ -1,38 +1,161 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #141414;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.navbar {
+  align-items: center;
+  background-color: #000;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.navbar h1 {
+  font-size: 2rem;
+  padding-left: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  width: 200px;
+  padding-right: 0px;
+}
+
+.search-bar i {
+  position: absolute;
+  right: 10px;
+  color: #e50914;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.hero-section {
+  padding: 50px 20px;
+  background-color: #000;
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-heading {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-primary {
+  background-color: #e50914;
+  border-color: #e50914;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.btn-primary:hover {
+  background-color: #b81d13;
+  border-color: #b81d13;
+}
+
+
+.carousel {
+  position: relative;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 500px;
+}
+
+.carousel-caption {
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+.main-content {
+  padding: 20px;
+}
+
+.movie-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-card {
+  width: 200px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #333;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-details {
+  padding: 10px;
+}
+
+.movie-details h3 {
+  margin: 0;
+  font-size: 1.2rem; 
+}
+
+.movie-details p {
+  margin: 5px 0 0;
+  font-size: 1rem; 
+}
+
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+.footer {
+  background-color: #000;
+  color: #666;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.6);
+  margin-top: auto;
+}
+
+.footer p{
+  line-height: 10px;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
